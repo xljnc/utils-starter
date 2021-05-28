@@ -16,9 +16,9 @@ import java.util.Map;
  * @date 2021/1/4
  */
 @Component
-@ConditionalOnMissingBean(RocketMQUtil.class)
+@ConditionalOnMissingBean(RocketMQProducerUtil.class)
 @ConditionalOnProperty(prefix = "rocketmq", name = "enableProducer", havingValue = "true")
-public class RocketMQUtil {
+public class RocketMQProducerUtil {
 
     @Autowired
     private RocketMQTemplate rocketMQTemplate;
