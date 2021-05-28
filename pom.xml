@@ -6,11 +6,10 @@
     <packaging>pom</packaging>
     <modules>
         <module>utils-starter-rocketmq</module>
+        <module>utils-starter-redis</module>
+        <module>utils-starter-openfeign</module>
+        <module>utils-starter-mybatis-plus</module>
     </modules>
-
-<!--        <module>utils-starter-mybatis-plus</module>-->
-<!--        <module>utils-starter-openfeign</module>-->
-<!--        <module>utils-starter-redis</module>-->
 
     <parent>
         <groupId>org.springframework.boot</groupId>
