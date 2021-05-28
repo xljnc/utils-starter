@@ -3,7 +3,7 @@ package com.wt.openfeign.util;
 import java.net.URI;
 
 /**
- * @author 一贫
+ * @author qiyu
  * @date 2021/1/4
  */
 public class UriUtil {

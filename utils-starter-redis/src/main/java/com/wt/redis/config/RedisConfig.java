@@ -18,7 +18,7 @@ import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
 /**
  * redis 配置类
  *
- * @author 一贫
+ * @author qiyu
  * @date 2020/12/29
  */
 @Configuration

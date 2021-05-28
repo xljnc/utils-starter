@@ -7,7 +7,7 @@ import java.util.Collection;
 import java.util.List;
 
 /**
- * @author 一贫
+ * @author qiyu
  * @date 2021/1/15
  */
 public interface BaseService<T> {

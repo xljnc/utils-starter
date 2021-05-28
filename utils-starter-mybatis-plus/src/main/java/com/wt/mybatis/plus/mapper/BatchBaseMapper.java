@@ -5,7 +5,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import java.util.Collection;
 
 /**
- * @author 一贫
+ * @author qiyu
  * @date 2021/1/23
  */
 public interface BatchBaseMapper<T> extends BaseMapper<T> {

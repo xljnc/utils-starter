@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 /**
- * @author 一贫
+ * @author qiyu
  * @date 2021/1/4
  */
 @EnableFeignClients("${feign.basePackages}")

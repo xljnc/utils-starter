@@ -7,7 +7,7 @@ import com.baomidou.mybatisplus.extension.injector.methods.InsertBatchSomeColumn
 import java.util.List;
 
 /**
- * @author 一贫
+ * @author qiyu
  * @date 2021/1/23
  */
 public class BatchSqlInjector extends DefaultSqlInjector {

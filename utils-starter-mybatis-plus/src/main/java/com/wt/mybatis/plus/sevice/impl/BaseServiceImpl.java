@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * mybatis plus 基础service实现类
  *
- * @author 一贫
+ * @author qiyu
  * @date 2020/12/28
  */
 public class BaseServiceImpl<M extends BatchBaseMapper<T>, T> implements BaseService<T> {
