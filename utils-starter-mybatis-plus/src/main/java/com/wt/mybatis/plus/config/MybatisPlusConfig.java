@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerIntercept
 import com.wt.mybatis.plus.injector.BatchSqlInjector;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -34,6 +35,7 @@ public class MybatisPlusConfig {
 
     @Bean
     @ConditionalOnMissingBean(BatchSqlInjector.class)
+    @ConditionalOnExpression("${mybatis-plus.dbType:mysql}")
     public ISqlInjector batchSqlInjector() {
         return new BatchSqlInjector();
     }
