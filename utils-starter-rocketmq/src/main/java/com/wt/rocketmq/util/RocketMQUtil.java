@@ -4,6 +4,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Component;
@@ -15,8 +16,9 @@ import java.util.Map;
  * @date 2021/1/4
  */
 @Component
-@ConditionalOnMissingBean(RocketMqUtil.class)
-public class RocketMqUtil {
+@ConditionalOnMissingBean(RocketMQUtil.class)
+@ConditionalOnProperty(prefix = "rocketmq", name = "enableProducer", havingValue = "true")
+public class RocketMQUtil {
 
     @Autowired
     private RocketMQTemplate rocketMQTemplate;

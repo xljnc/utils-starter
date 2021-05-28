@@ -9,6 +9,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -35,7 +36,7 @@ public class MybatisPlusConfig {
 
     @Bean
     @ConditionalOnMissingBean(BatchSqlInjector.class)
-    @ConditionalOnExpression("${mybatis-plus.dbType:mysql}")
+    @ConditionalOnProperty(prefix = "mybatis-plus", name = "dbType", havingValue = "mysql")
     public ISqlInjector batchSqlInjector() {
         return new BatchSqlInjector();
     }
